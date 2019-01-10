@@ -12,6 +12,6 @@ class EncryptCookies extends BaseEncrypter
      * @var array
      */
     protected $except = [
-        //
+        'lang',  //for the user set language in j
     ];
 }

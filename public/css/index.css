@@ -1,0 +1,86 @@
+html, body {
+	background-color: #fff;
+	color: #636b6f;
+	font-family: 'Nunito', sans-serif;
+	font-weight: 200;
+	height: 100vh;
+	margin: 0;
+}      
+
+.hidden{
+	display:none !important;
+}
+.lang{
+	visibility: hidden;
+}
+.invisible{
+	visibility:hidden;
+}
+
+/*form elements */
+.form-control, button{
+	border-radius:0px !important;
+}
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow:none;
+}
+select {
+	/* for Firefox */
+	-moz-appearance: none !important;
+	/* for Chrome */
+	-webkit-appearance: none !important;
+}
+select::-ms-expand {
+	display: none !important;
+}
+/*form elements*/
+
+/*borders*/
+.border-jet-black{
+	border:thin;
+	border-color:#0a0a0a;
+	border-style:solid;
+}
+/*borders*/
+
+/*internationale*/
+.lang-toggle > button{
+	background-color:transparent;
+	border:none;
+	cursor:pointer;
+}
+.lang-toggle > button:focus{
+	outline:0;
+	box-shadow:none;
+}
+.lang-toggle{
+	position:absolute;
+	right:0px;
+	top:5px;
+	width:100px;
+	height:100px;
+	z-index: 10000;
+}
+/*internationale*/
+
+/*chart*/
+.market-chart{
+	height: 400px;
+  	display: flex;
+  	flex-direction: column;
+}
+.market-chart div.xAxis div.tickLabel { 
+	margin-top: 15px;   
+    transform: rotate(-40deg);
+    -ms-transform:rotate(-40deg); /* IE 9 */
+    -moz-transform:rotate(-40deg); /* Firefox */
+    -webkit-transform:rotate(-40deg); /* Safari and Chrome */
+    -o-transform:rotate(-40deg); /* Opera */
+    /*rotation-point:50% 50%;*/ /* CSS3 */
+    /*rotation:270deg;*/ /* CSS3 */
+}
+/*chart*/
