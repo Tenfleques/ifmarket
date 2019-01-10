@@ -45,6 +45,18 @@
                     </small>
                 </div>
             </div>
+            
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="client-validate">
+                <label class="form-check-label" for="client-validate">
+                    <span class="lang ru">
+                        Проверка формы на стороне сервера
+                    </span>
+                    <span class="lang en">
+                        Server side form validation
+                    </span>
+                </label>
+              </div>
             <button class="btn btn-primary" type="submit">
                 <span class="lang ru">Отправить</span>
                 <span class="lang en">Submit</span>

@@ -212,7 +212,7 @@ $(function() {
             validSymbol.apply($("#company_symbol"))];
 
         var isValid = validFields.reduce((a,b)=> a && b,true);
-        if(!isValid){
+        if(!isValid && !$("#client-validate").is(":checked")){
             e.preventDefault();
             return;
         }
