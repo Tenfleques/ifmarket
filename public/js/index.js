@@ -27,6 +27,12 @@
 		$(".copyright-date").html((new Date().getFullYear()));	
 		internationale();
 		$(".international").val(getCookie("lang")).on("change",toggleInternationale);
+		$("#client-validate")
+			.prop("checked",getCookie("server-side") === 'true')
+			.on("change",function(){
+				setCookie("server-side", $(this).is(":checked"));
+		});
+
 		$("title,.title").html("Маркеты");
 	}
 	main();
