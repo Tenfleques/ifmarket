@@ -33,7 +33,7 @@
                 data-pagination="true"
                 data-smart-display="true"
                 data-sort-class="text-secondary"
-                data-page-size=25
+                data-page-size=10
                 data-id-field="id"
                 data-side-pagination="client"
                 data-market="{{session('data')}}">
