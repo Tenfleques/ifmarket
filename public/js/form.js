@@ -213,8 +213,8 @@ $(function() {
 
         var isValid = validFields.reduce((a,b)=> a && b,true);
         if(!isValid){
-            //e.preventDefault();
-            //return;
+            e.preventDefault();
+            return;
         }
     }
     function main(){

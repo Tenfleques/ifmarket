@@ -47,25 +47,23 @@ class MarketHistory extends Controller{
         try{
             $url = "https://www.quandl.com/api/v3/datasets/WIKI/".strtoupper($symbol).".csv?order=asc&start_date=".$start_date."&&end_date=".$end_date;
             $error = $url;
-            //if(file_exists($url)){
-                $csv = file($url);
-                foreach($csv as $index => $line){
-                    $line = str_replace('"',"",$line);
-                    $row = explode(",",$line); 
-                    if(!$i){
-                        $keys = $row;
-                    }else{
-                        $record = [];
-                        for($j = 0; $j < 6; ++ $j){ //collect the first 5 columns from the csv
-                            $record[$keys[$j]] = $row[$j]; 
-                        }
-                        $hist[] = $record;
-                        $chart["Open"][] = [strtotime($record["Date"])*1000,floatval($record["Open"])];
-                        $chart["Close"][] = [strtotime($record["Date"])*1000,floatval($record["Close"])];
+            $csv = file($url);
+            foreach($csv as $index => $line){
+                $line = str_replace('"',"",$line);
+                $row = explode(",",$line); 
+                if(!$i){
+                    $keys = $row;
+                }else{
+                    $record = [];
+                    for($j = 0; $j < 6; ++ $j){ //collect the first 5 columns from the csv
+                        $record[$keys[$j]] = $row[$j]; 
                     }
-                    ++$i;
+                    $hist[] = $record;
+                    $chart["Open"][] = [strtotime($record["Date"])*1000,floatval($record["Open"])];
+                    $chart["Close"][] = [strtotime($record["Date"])*1000,floatval($record["Close"])];
                 }
-            //}
+                ++$i;
+            }
         }catch(\Exception $e){
             $error = "not found ".$url;
             $code = 404; // not found error

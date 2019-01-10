@@ -34,7 +34,9 @@
         <script src="/js/storage.js"></script>
         <script src="/js/jquery.flot.js"></script>
             
-        <script src="/js/index.js"></script>
         <script src="/js/form.js"></script>
+        <script src="/js/table.js"></script>
+        <script src="/js/chart.js"></script>
+        <script src="/js/index.js"></script>
     </body>
 </html>
